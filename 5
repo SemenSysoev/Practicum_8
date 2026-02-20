@@ -1,0 +1,37 @@
+stroka_1 = 'qwertya'
+stroka_2 = 'asdfgz'
+stroka_3 = 'zxcvbq'
+slovar1 = ''
+slovar2 = ''
+slovar3 = ''
+for index in range(len(stroka_1)-1):
+    if stroka_1[index] != stroka_1[index+1]:
+        if not(stroka_1[index] in slovar1):
+            slovar1 += stroka_1[index]
+        if not(stroka_1[index+1] in slovar1):
+            slovar1 += stroka_1[index+1]
+for index in range(len(stroka_2)-1):
+    if stroka_2[index] != stroka_2[index+1]:
+        if not(stroka_2[index] in slovar2):
+            slovar2 += stroka_2[index]
+        if not(stroka_2[index+1] in slovar2):
+            slovar2 += stroka_2[index+1]
+for index in range(len(stroka_3)-1):
+    if stroka_3[index] != stroka_3[index+1]:
+        if not(stroka_3[index] in slovar3):
+            slovar3 += stroka_3[index]
+        if not(stroka_3[index+1] in slovar3):
+            slovar3 += stroka_3[index+1]
+str1 = ''
+str2 = ''
+str3 = ''
+for i in slovar1:
+    if i not in slovar2 + slovar3:
+        str1 += i
+for i in slovar2:
+    if i not in slovar1 + slovar3:
+        str2 += i
+for i in slovar3:
+    if i not in slovar2 + slovar1:
+        str3 += i
+print(str1, str2, str3)
