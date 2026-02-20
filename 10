@@ -1,0 +1,17 @@
+predlozenie = 'ya lybly mamu'.split()
+def nepovtor(text):
+    slovar = ''
+    for index in range(len(text) - 1):
+        if text[index] != text[index + 1]:
+            if not (text[index] in slovar):
+                slovar += text[index]
+            if not (text[index + 1] in slovar):
+                slovar += text[index + 1]
+    if len(slovar) != len(text):
+        return False
+    else:
+        return True
+for index in range(len(predlozenie)):
+    if predlozenie[index] != predlozenie[0]:
+        if nepovtor(predlozenie[index]):
+            print(predlozenie[index])
