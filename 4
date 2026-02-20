@@ -1,0 +1,11 @@
+text = 'текст'
+slovar = ''
+for index in range(len(text)-1):
+    if text[index] != text[index+1]:
+        if not(text[index] in slovar):
+            slovar += text[index]
+        if not(text[index+1] in slovar):
+            slovar += text[index+1]
+for letter in slovar:
+    if text.count(letter) == 3:
+        print(letter)
