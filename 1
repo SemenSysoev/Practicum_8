@@ -1,0 +1,10 @@
+text = 'текст'
+count = 0
+max_count = 0
+for letter in text:
+    if letter == ' ':
+        count += 1
+        max_count = max(count, max_count)
+    else:
+        count = 0
+print(max_count)
