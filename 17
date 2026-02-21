@@ -88,15 +88,4 @@ def calculate(expression):
     if len(values) == 1:
         return values[0]
     else:
-        return None  # Невалидное выражение, слишком много значений
-
-# Примеры использования
-print(calculate("10 + 2 * 6"))  # Output: 22
-print(calculate("100 * ( 2 + 12 )"))  # Output: 1400
-print(calculate("100 * ( 2 + 12 ) / 14"))  # Output: 100.0
-print(calculate("( 1 + 2 ) * ( 3 + 4 )")) # Output: 21
-print(calculate("10 / 0")) # Output: None
-print(calculate("2 + (3 * 4)")) # Output: 14
-print(calculate("2 + (3 * 4))")) # Output: None
-print(calculate("(2 + 3 * 4")) # Output: None
-print(calculate("2 + a")) # Output: None
+        return None  
